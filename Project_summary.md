@@ -43,10 +43,10 @@ BraTS2021
 
 ### 2. 데이터 증강 기법
 기존에 있던 데이터를 인위적으로 회전, 이동, 확대 등을 통하여 기존의 데이터를 확장시켜 학습에 충분한 데이터를 확보한다.
-> ![Image](https://github.com/user-attachments/assets/3bbb0489-1671-4fcb-b303-fff603008556)
-### 3. 정규화
-### 4. 뇌종양 이미지 분할
-### 5. CNN모델?
+![Image](https://github.com/user-attachments/assets/3bbb0489-1671-4fcb-b303-fff603008556)
+
+### 3. 뇌종양 이미지 분할
+### 4. CNN모델?
 
 ## 정규화 비교
 | 항목           | 0~1 스케일링                | Z-score 정규화                      |
