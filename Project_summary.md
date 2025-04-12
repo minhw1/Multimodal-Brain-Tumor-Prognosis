@@ -49,6 +49,9 @@ U-Net 활용
 >CNN 기반 구조 <br>
 ![image](https://github.com/user-attachments/assets/15435108-96f6-47be-8bf4-9d15cf4d9378)
 
+https://www.kaggle.com/code/domingao/iou-82-brain-tumor-segmentation
+위의 코드를 사용할 예정
+
 ~~### 4. 텍스트 인코더
 진료 기록, 병력 등의 텍스트를 벡터로 변환
 LLM 기반 ( bert 보다 넓은 개념, 일반적으로 bert로도 충분 )~~
@@ -68,3 +71,6 @@ CNN+LSTM 활용
 | 아웃라이어 민감도 | 민감함                       | 덜 민감함                           |
 | 주요 사용처     | CNN, 기본 이미지 전처리      | ViT, 통계 기반 모델, 분석 전처리   |
 | 정렬 효과       | 스케일 맞춤                  | 중심 위치 및 분산 정렬             |
+
+## 사용 툴
+PyCharm
