@@ -2,10 +2,10 @@
 환자의 MRI 영상 및 임상 정보를 기반으로, 지정된 시간 간격(ex: 6개월 후) 이후의 뇌종양 **부피Volume**를 수치적으로 정량 예측, **영역mask**을 예측하는 회귀 기반 모델을 개발한다.
 <br><br>
 ## 흐름
-+ 데이터 로딩 및 전처리(VIT&LLM) 후 정규화
++ 데이터 로딩 및 전처리 후 정규화
   <br>-BraTS 데이터셋(2021)을 다운로드하고 MRI 이미지를 정규화
   <br>-환자의 메타데이터(나이, 성별, 병력 등)를 텍스트 형식으로 정리
-+ Vision Transformer (ViT) 모델 구축
++ Vision Transformer (ViT) or U-Net 모델 구축
   <br>-MRI 영상에서 종양의 특징을 추출하는 모델
   <br>-사전 학습된 ViT 모델을 활용하거나, BraTS 데이터로 미세 조정(Fine-tuning)
 + LLM 기반 텍스트 인코더
@@ -28,10 +28,10 @@ BraTS2021
 >+ 3D 뇌 MRI 스캔을 기반으로 한 볼륨 데이터
 >+ 한 환자의 MRI는 여러 슬라이스로 구성된 3차원 영상이며, 보통 다음과 같은 4가지 시퀀스가 제공된다.
 > ![Image](https://github.com/user-attachments/assets/3b1877c0-d128-48cd-b9f3-8f667014f5e3)
->>1. ~~T1-weighted (T1)~~ 주로 사용안함
->>2. T1 with contrast enhancement (T1ce)
->>3. T2-weighted (T2)
->>4. FLAIR (Fluid Attenuated Inversion Recovery)
+>>1. ~~T1-weighted (T1)~~: 기본적인 해부학 정보제공 주로 사용안함
+>>2. T1 with contrast enhancement (T1ce) : 종양의 활성 부위 잘 보임
+>>3. T2-weighted (T2) : 종양 주위 부종 표현에 유리
+>>4. FLAIR (Fluid Attenuated Inversion Recovery) : 종양 영역 더 잘보이게 함함
 <br><br>
 ## 주요 기술
 ### 1. 전처리
@@ -45,7 +45,10 @@ BraTS2021
 기존에 있던 데이터를 인위적으로 회전, 이동, 확대 등을 통하여 기존의 데이터를 확장시켜 학습에 충분한 데이터를 확보한다.
 ![Image](https://github.com/user-attachments/assets/3bbb0489-1671-4fcb-b303-fff603008556)
 
-### 3. 뇌종양 이미지 분할
+### 3. 구획화 모델
+U-Net 활용
+>CNN 기반 구조
+
 ### 4. CNN모델?
 
 ## 정규화 비교
