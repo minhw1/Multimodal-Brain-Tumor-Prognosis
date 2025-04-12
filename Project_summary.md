@@ -44,7 +44,7 @@ BraTS2021
 기존에 있던 데이터를 인위적으로 회전, 이동, 확대 등을 통하여 기존의 데이터를 확장시켜 학습에 충분한 데이터를 확보한다.
 ![Image](https://github.com/user-attachments/assets/3bbb0489-1671-4fcb-b303-fff603008556)
 
-### 3. 종양 구획화 모델
+### 3. 종양 구획화 모델(segmentation)
 U-Net 활용
 >CNN 기반 구조 <br>
 ![image](https://github.com/user-attachments/assets/15435108-96f6-47be-8bf4-9d15cf4d9378)
