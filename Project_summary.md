@@ -9,8 +9,7 @@
   <br>-MRI 영상에서 종양의 위치를 추출하는 모델
 + LLM 기반 텍스트 인코더
   <br>-환자의 병력, 진료 기록 등을 벡터로 변환
-  <br>-GPT 계열 모델이나 BERT 기반의 모델을 사용할 수 있음
-+ 멀티모달 결합(Fusion Module)
++ 멀티모달 결합
   <br>-영상 특징과 LLM의 임상 정보 특징을 결합
   <br>-Multimodal Fusion Module사용 가능
 ---
@@ -47,9 +46,13 @@ BraTS2021
 ### 3. 종양 구획화 모델
 U-Net 활용
 >CNN 기반 구조 <br>
-![Image](https://github.com/user-attachments/assets/3e3e6864-1c14-4bb3-b492-eb06aaf3f0a5)
+![image](https://github.com/user-attachments/assets/15435108-96f6-47be-8bf4-9d15cf4d9378)
 
-### 4. 
+
+### 4. 텍스트 인코더
+진료 기록, 병력 등의 텍스트를 벡터로 변환
+LLM 기반 ( bert 보다 넓은 개념, 일반적으로 bert로도 충분 )
+
 
 ## 정규화 비교
 | 항목           | 0~1 스케일링                | Z-score 정규화                      |
