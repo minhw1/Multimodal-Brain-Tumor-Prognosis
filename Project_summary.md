@@ -5,14 +5,13 @@
 + 데이터 로딩 및 전처리 후 정규화
   <br>-BraTS 데이터셋(2021)을 다운로드하고 MRI 이미지를 정규화
   <br>-환자의 메타데이터(나이, 성별, 병력 등)를 텍스트 형식으로 정리
-+ Vision Transformer (ViT) or U-Net 모델 구축
-  <br>-MRI 영상에서 종양의 특징을 추출하는 모델
-  <br>-사전 학습된 ViT 모델을 활용하거나, BraTS 데이터로 미세 조정(Fine-tuning)
++ U-Net 모델 구축
+  <br>-MRI 영상에서 종양의 위치를 추출하는 모델
 + LLM 기반 텍스트 인코더
   <br>-환자의 병력, 진료 기록 등을 벡터로 변환
   <br>-GPT 계열 모델이나 BERT 기반의 모델을 사용할 수 있음
 + 멀티모달 결합(Fusion Module)
-  <br>-ViT의 영상 특징과 LLM의 임상 정보 특징을 결합
+  <br>-영상 특징과 LLM의 임상 정보 특징을 결합
   <br>-Multimodal Fusion Module사용 가능
 ---
 + 회귀 모델 (부피 예측)=수치
@@ -45,11 +44,12 @@ BraTS2021
 기존에 있던 데이터를 인위적으로 회전, 이동, 확대 등을 통하여 기존의 데이터를 확장시켜 학습에 충분한 데이터를 확보한다.
 ![Image](https://github.com/user-attachments/assets/3bbb0489-1671-4fcb-b303-fff603008556)
 
-### 3. 구획화 모델
+### 3. 종양 구획화 모델
 U-Net 활용
->CNN 기반 구조
+>CNN 기반 구조 <br>
+![Image](https://github.com/user-attachments/assets/3e3e6864-1c14-4bb3-b492-eb06aaf3f0a5)
 
-### 4. CNN모델?
+### 4. 
 
 ## 정규화 비교
 | 항목           | 0~1 스케일링                | Z-score 정규화                      |
