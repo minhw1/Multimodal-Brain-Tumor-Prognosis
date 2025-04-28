@@ -56,7 +56,7 @@ https://www.kaggle.com/code/domingao/iou-82-brain-tumor-segmentation
  에서 제공되는 구획화 모델 코드 및 기법을 활용할 예정<br> 
   <a name="BTP-구획화모델코드"></a>
 <br>  [BTP 구획화 모델 코드.pdf](BTP_visualization.pdf)
-<br> 
+<br> <br> 
  <a name="BraTS-2021-구획화모델코드"></a>
 <br>  [BraTS 2021 구획화 모델 코드.pdf](BraTS21_visualization.pdf)
 
@@ -88,7 +88,9 @@ VS Code
 + 특징: 멀티시퀀스 MRI(T1, T1c, T2, FLAIR)와 정밀 종양 세그멘테이션 마스크 포함. <br>
 **2D로 변환 필요!**
  [ 변환 코드 ](#BraTS-2021-구획화모델코드)
+
 ---
+
 ## 정규화 비교
 | 항목           | 0~1 스케일링                | Z-score 정규화                      |
 |----------------|------------------------------|-------------------------------------|
