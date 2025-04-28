@@ -53,7 +53,8 @@ U-Net 활용
 ![image](https://github.com/user-attachments/assets/15435108-96f6-47be-8bf4-9d15cf4d9378)
 
 https://www.kaggle.com/code/domingao/iou-82-brain-tumor-segmentation
-해당 링크의 코드를 활용할 예정
+ <br> 해당 링크의 코드를 활용할 예정
+ [구획화 모델 코드](BraTS21_visualization.pdf)
 
 ~~### 4. 텍스트 인코더
 진료 기록, 병력 등의 텍스트를 벡터로 변환
