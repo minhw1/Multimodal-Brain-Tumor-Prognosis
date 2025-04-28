@@ -54,7 +54,10 @@ U-Net 활용
 
 https://www.kaggle.com/code/domingao/iou-82-brain-tumor-segmentation
  에서 제공되는 구획화 모델 코드 및 기법을 활용할 예정<br> 
- <a name="BraTS 2021 구획화모델코드"></a>
+  <a name="BTP-구획화모델코드"></a>
+<br>  [BTP 구획화 모델 코드.pdf](BTP_visualization.pdf)
+<br> 
+ <a name="BraTS-2021-구획화모델코드"></a>
 <br>  [BraTS 2021 구획화 모델 코드.pdf](BraTS21_visualization.pdf)
 
 ~~4. 텍스트 인코더
@@ -78,7 +81,8 @@ VS Code
 1. Brain Tumor Progression Dataset (andrewmvd/brain-tumor-progression) <br>
 + 형식: 2D 슬라이스 (3D MRI를 2D로 분할) <br>
 + 특징: 환자별 종양 진행 과정을 2D 이미지로 기록. 종양 마스크 포함. <br>
-
+[ 변환 코드 ](#BTP-구획화모델코드)
+<br>
 2. BraTS 2021 Task 1 Dataset (dschettler8845/brats-2021-task1) <br>
 + 형식: 3D 볼륨 데이터 (NIfTI 포맷) <br>
 + 특징: 멀티시퀀스 MRI(T1, T1c, T2, FLAIR)와 정밀 종양 세그멘테이션 마스크 포함. <br>
