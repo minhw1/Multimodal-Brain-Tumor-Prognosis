@@ -37,7 +37,9 @@ BraTS2021
 모델에 데이터를 넣기 전에 데이터를 깨끗하게 정리하고 준비하는 과정
 + 정규화 ( 크기, 밝기 등 )
 >  보통 픽셀 값을 0~1 사이 혹은 Z-score 정규화로 변경  [ 차이점 ](#정규화-비교) <br>
-> ![Image](https://github.com/user-attachments/assets/2ea431be-e9ac-4792-8f74-32e3c3332a55)
+> ![Image](https://github.com/user-attachments/assets/2ea431be-e9ac-4792-8f74-32e3c3332a55) <br>
+> **x = (x-μ)/σ (x>0)**<br>
+>  위의 식에서 x>0은 MRI 영상의 뇌종양 영역이고, μ는 데이터 전체의 평균치, σ 는 데이터의 표준 편차를 나타낸다.
 + 배경 제거 ( 데이터 상태에 따라 다름 )
 
 ### 2. 데이터 증강 기법
@@ -46,6 +48,7 @@ BraTS2021
 
 ### 3. 종양 구획화 모델(segmentation)
 U-Net 활용
+이미지를 작게 줄여가면서 중요한 특징을 뽑고, 다시 복원하면서 세밀한 위치 정보를 복구
 >CNN 기반 구조 <br>
 ![image](https://github.com/user-attachments/assets/15435108-96f6-47be-8bf4-9d15cf4d9378)
 
@@ -57,13 +60,29 @@ https://www.kaggle.com/code/domingao/iou-82-brain-tumor-segmentation
 LLM 기반 ( bert 보다 넓은 개념, 일반적으로 bert로도 충분 )~~
 
 ### 5. 미래 종양 부피 예측
-수치
+수치 <br>
 회귀 모델,CNN + MLP 활용
 
 ### 6. 미래 종양 위치 예측
-형태
+형태 <br>
 CNN+LSTM 활용
 
+---
+## 사용 툴
+PyCharm <br>
+VS Code
+
+## 사용 데이터셋
+1. Brain Tumor Progression Dataset (andrewmvd/brain-tumor-progression) <br>
++ 형식: 2D 슬라이스 (3D MRI를 2D로 분할) <br>
++ 특징: 환자별 종양 진행 과정을 2D 이미지로 기록. 종양 마스크 포함. <br>
+
+2. BraTS 2021 Task 1 Dataset (dschettler8845/brats-2021-task1) <br>
++ 형식: 3D 볼륨 데이터 (NIfTI 포맷) <br>
++ 특징: 멀티시퀀스 MRI(T1, T1c, T2, FLAIR)와 정밀 종양 세그멘테이션 마스크 포함. <br>
+**2D로 변환 필요!**
+
+---
 ## 정규화 비교
 | 항목           | 0~1 스케일링                | Z-score 정규화                      |
 |----------------|------------------------------|-------------------------------------|
@@ -71,6 +90,3 @@ CNN+LSTM 활용
 | 아웃라이어 민감도 | 민감함                       | 덜 민감함                           |
 | 주요 사용처     | CNN, 기본 이미지 전처리      | ViT, 통계 기반 모델, 분석 전처리   |
 | 정렬 효과       | 스케일 맞춤                  | 중심 위치 및 분산 정렬             |
-
-## 사용 툴
-PyCharm
